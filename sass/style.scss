@@ -1,0 +1,73 @@
+@import 'base';
+
+body{
+	margin:0;
+	padding:0;
+}
+
+.header{
+	height:60px;
+	background-color: $header-color;
+	color: $primary-color;
+}
+#header_logo{
+	width: 140px;
+    margin-top: 13px;
+    display: block;
+    float: left;
+}
+
+#header_logo img{
+    width: 130px;
+}
+
+#hamburger_menu{
+	width:60px;
+	float:left;
+	
+	cursor:pointer;
+	font-size: 24px;
+    height: 60px;
+    padding:15px;
+    box-sizing:border-box;
+}
+#drawer {
+    position: fixed;
+    top:60px;
+    bottom: 0px;
+    left: -250px;
+    height: auto;
+    width: 250px;
+    background: none repeat scroll 0% 0% #2F2F2F;    
+}
+
+#drawer ul {
+    list-style: outside none none;
+    padding: 0px;
+
+}
+
+#drawer li a {
+      color: #FFF;
+    text-decoration: none;
+   
+}
+#drawer.drawer_left {
+    transition: all 1s ease 0s;
+      left: 0px;
+}
+#header_articles{
+    height:60px;
+        width: 60px;
+  float:right;
+  cursor:pointer;
+    
+    h2{
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 0px;
+    }
+    label{
+    font-size:0.35em;
+    }
+}

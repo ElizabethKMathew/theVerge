@@ -2,8 +2,46 @@
 <html>
 <head>
 	<title>theVerge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
+<div class="container">
 
+	<div class = "header">
+		
+		<div id="hamburger_menu"><i class="fa fa-bars"></i></div>
+		<div id="header_logo"><img src="images/logo.png" alt="logo">
+		</div>
+	<div id="header_articles">
+	<h2>21</h2>
+	<label>New Articles</label>
+	</div>
+	</div>
+	<nav id="drawer" class="">
+                <ul>
+                    <li><a href="#">HOME</a></li><hr/>
+                    <li><a href="#">LONGFORM</a></li><hr/>
+                    <li><a href="#">REVIEWS</a></li><hr>
+                    <li><a href="#">VIDEO</a></li><hr>
+                    <li><a href="#">TECH</a></li><hr>
+                    <li><a href="#">SCIENCE</a></li><hr>
+                    <li><a href="#">CARS</a></li><hr>
+                    <li><a href="#">DESIGN</a></li><hr>
+                    <li><a href="#">US&WORLD</a></li><hr>
+                    <li><a href="#">FORUMS</a></li><hr>
+                    <li><a href="#">SEARCH</a></li><hr>
+                </ul>
+            </nav>
+
+         </div>
+        <script type="text/javascript">
+            document.getElementById('hamburger_menu').addEventListener('click',drawer, false);
+
+                function  drawer(){
+                document.getElementById('drawer').classList.toggle('drawer_left');
+                }
+        </script>
 </body>
 </html>
