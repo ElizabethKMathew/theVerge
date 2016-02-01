@@ -4,11 +4,19 @@ body{
 	margin:0;
 	padding:0;
 }
+.container {
+    width: 100%;
+    position: relative;
+    min-height:640px;
+    overflow-x: hidden;
+}
 
 .header{
+
 	height:60px;
 	background-color: $header-color;
 	color: $primary-color;
+    z-index:10;
 }
 #header_logo{
 	width: 140px;
@@ -32,13 +40,13 @@ body{
     box-sizing:border-box;
 }
 #drawer {
-    position: fixed;
+    position: absolute;
     top:60px;
     bottom: 0px;
     left: -250px;
     height: auto;
     width: 250px;
-    background: none repeat scroll 0% 0% #2F2F2F;    
+    background: none repeat scroll 0% 0% #222;    
 }
 
 #drawer ul {
@@ -46,7 +54,10 @@ body{
     padding: 0px;
 
 }
-
+#drawer ul li{
+  border-top: 1px solid #2f2f2f;
+  padding:8px;
+}
 #drawer li a {
       color: #FFF;
     text-decoration: none;
@@ -55,19 +66,186 @@ body{
 #drawer.drawer_left {
     transition: all 1s ease 0s;
       left: 0px;
+      z-index: 999;
 }
 #header_articles{
     height:60px;
         width: 60px;
   float:right;
   cursor:pointer;
+  border-left: 2px solid #fff;
+    padding-left: 5px;
     
     h2{
     font-weight: bold;
     font-size: 2em;
     margin-top: 0px;
+    margin-bottom: 0px;
     }
     label{
-    font-size:0.35em;
+    font-size:0.5em;
     }
+}
+
+#article_drawer{
+    position: absolute;
+    top:60px;
+    bottom: 0px;
+    right: -250px;
+    height: auto;
+    width: 250px;
+    background: none repeat scroll 0% 0% #fcfcfc;  
+  border-left: 2px solid #fa4b2a;  
+}
+.article_day h3{
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: $header-color;
+    color: #fff;
+    display: inline-block;
+    margin: 12px 5px 0 10px;
+    padding: 4px;
+}
+.articles_stories{
+    color:$black;
+}
+.articles_stories li{
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    span{
+        font-size: 0.65rem;
+    color: #333;
+    display: block;
+    text-transform: lowercase;
+    padding-bottom:4px;
+    }
+   }
+#article_drawer.drawer_right {
+    transition: all 1s ease 0s;
+      right: 0px;
+      z-index: 999;
+}
+
+.content{
+     position: relative;
+}
+
+.news_content{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn2.vox-cdn.com/thumbor/f2EPzA8llCTzGi_TfI1rCEmO6do=/0x184:3696x2263/340x192/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48678951/GettyImages-486026810.0.jpg");
+   &:after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(135deg, $violet,$dark-green);
+    opacity: 0.7;
+   }
+}
+.news_headline{
+    position:absolute;
+    top: 0;
+    left: 0;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    z-index:10;
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    z-index:10;
+}
+}
+
+.news_content2{
+    position: absolute;
+    top:200px;
+    left:0px;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn0.vox-cdn.com/thumbor/hBiFiQZoJS-f7OLPw5EjywaqE4w=/0x697:3000x1697/800x267/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48666971/20151010CASF_Water02145_1.0.0.jpg");
+
+ &:after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(135deg, $dark-blue,$purple);
+    opacity: 0.7;
+}
+}
+.news_headline2{
+    position:absolute;
+    top:200px;
+    left: 0;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    z-index:10;
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    z-index:10;
+}
+}
+.news_content3{
+    position: absolute;
+    top:400px;
+    left:0px;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn2.vox-cdn.com/thumbor/5IDBWEBU6NVmKx8QgfEAM7aQLK4=/0x79:1275x796/340x192/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48692457/airmail.0.0.jpg");
+
+ &:after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(135deg, #292484,#dc4225);
+    opacity: 0.7;
+}
+}
+.news_headline3{
+    position:absolute;
+    top:400px;
+    left: 0;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    z-index:10;
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    z-index:10;
+}
 }

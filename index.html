@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>theVerge</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta id="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"></meta>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
@@ -11,36 +11,101 @@
 
 	<div class = "header">
 		
-		<div id="hamburger_menu"><i class="fa fa-bars"></i></div>
-		<div id="header_logo"><img src="images/logo.png" alt="logo">
+<div id="hamburger_menu"><i class="fa fa-bars"></i></div>
+		<div id="header_logo"><img src="http://content.us.dlink.com/wp-content/uploads/2014/12/The-Verge-logo1.png" alt="logo">
 		</div>
-	<div id="header_articles">
+			<div id="header_articles">
 	<h2>21</h2>
 	<label>New Articles</label>
 	</div>
 	</div>
 	<nav id="drawer" class="">
                 <ul>
-                    <li><a href="#">HOME</a></li><hr/>
-                    <li><a href="#">LONGFORM</a></li><hr/>
-                    <li><a href="#">REVIEWS</a></li><hr>
-                    <li><a href="#">VIDEO</a></li><hr>
-                    <li><a href="#">TECH</a></li><hr>
-                    <li><a href="#">SCIENCE</a></li><hr>
-                    <li><a href="#">CARS</a></li><hr>
-                    <li><a href="#">DESIGN</a></li><hr>
-                    <li><a href="#">US&WORLD</a></li><hr>
-                    <li><a href="#">FORUMS</a></li><hr>
-                    <li><a href="#">SEARCH</a></li><hr>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">LONGFORM</a></li>
+                    <li><a href="#">REVIEWS</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">TECH</a></li>
+                    <li><a href="#">SCIENCE</a></li>
+                    <li><a href="#">CARS</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">US&WORLD</a></li>
+                    <li><a href="#">FORUMS</a></li>
+                    <li><a href="#">SEARCH</a></li>
                 </ul>
             </nav>
+	<nav id="article_drawer" class="">
+                
+                    <div class="article_day"><h3>February 01, 2016</h3>
+                    <ul class="articles_stories"><li><span>6:30am</span>
+            Cuba bringing broadband service to some homes in Havana
+          </li>
+         <li><span>4:30am</span>
+            YouTubers revolt over licensing of reaction videos
+          </li>
+          </ul>
+          </div> 
+                 <div class="article_day"><h3>January 31, 2016</h3>
+                    <ul class="articles_stories"><li><span>9:30pm</span>
+            
+            FCC okays LTE testing in unlicensed Wi-Fi spectrum
+         
+          </li>
+         <li><span>7:30pm</span>
+           
+            Samsung's Galaxy S7 event is happening in three weeks
+          
+          </li>
+          <li><span>3:30pm</span>
+            Samsung's Android browser gets ad blocking capabilities
+          </li>
+          </ul>
+          </div>  
+          <div class="article_day"><h3>January 30, 2016</h3>
+                    <ul class="articles_stories"><li><span>6:30am</span>
+            Cuba bringing broadband service to some homes in Havana
+          </li>
+         <li><span>4:30am</span>
+            YouTubers revolt over licensing of reaction videos
+          </li>
+          </ul>
+          </div>  
+            </nav>
+<div class="content">
+ <div class = "news_content">
+</div>
+<div class="news_headline"><h2>Hannibal Buress could rescue Spotifys boring new 'radio' series</h2>
+ <label>
+          By Lizzie Plaugic
+  </label></div>
+<div class = "news_content2"></div>
+<div class="news_headline2"><h2>San Francisco is keeping Yosemite Valleys lost twin under water</h2>
+<label>
+          
+          By Michael Zelenko
+            
+  </label></div>
+  <div class = "news_content3"></div>
+<div class="news_headline3"><h2>Airmail for iOS is here: the email app that can do everything</h2>
+<label>
+          
+          By Michael Zelenko
+            
+  </label></div>
+ </div>
 
-         </div>
-        <script type="text/javascript">
-            document.getElementById('hamburger_menu').addEventListener('click',drawer, false);
 
-                function  drawer(){
+        </div>
+      <script type="text/javascript">
+            document.getElementById('hamburger_menu').addEventListener('click',drawerleft, false);
+
+                function  drawerleft(){
                 document.getElementById('drawer').classList.toggle('drawer_left');
+                }
+                document.getElementById('header_articles').addEventListener('click',drawerright, false);
+
+                function  drawerright(){
+                document.getElementById('article_drawer').classList.toggle('drawer_right');
                 }
         </script>
 </body>
