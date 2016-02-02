@@ -3,12 +3,12 @@
 body{
 	margin:0;
 	padding:0;
+     overflow-x:hidden;
 }
 .container {
     width: 100%;
-    position: relative;
-    min-height:640px;
-    overflow-x: hidden;
+    height:100%;
+   
 }
 
 .header{
@@ -16,7 +16,7 @@ body{
 	height:60px;
 	background-color: $header-color;
 	color: $primary-color;
-    z-index:10;
+    
 }
 #header_logo{
 	width: 140px;
@@ -32,12 +32,29 @@ body{
 #hamburger_menu{
 	width:60px;
 	float:left;
-	
 	cursor:pointer;
 	font-size: 24px;
     height: 60px;
     padding:15px;
-    box-sizing:border-box;
+   
+}
+#header_articles{
+    height:60px;
+    width: 60px;
+  float:right;
+  cursor:pointer;
+  border-left: 2px solid #fff;
+ padding-left: 5px;
+    
+    h2{
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+    label{
+    font-size:0.5em;
+    }
 }
 #drawer {
     position: absolute;
@@ -68,24 +85,7 @@ body{
       left: 0px;
       z-index: 999;
 }
-#header_articles{
-    height:60px;
-        width: 60px;
-  float:right;
-  cursor:pointer;
-  border-left: 2px solid #fff;
-    padding-left: 5px;
-    
-    h2{
-    font-weight: bold;
-    font-size: 2em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    label{
-    font-size:0.5em;
-    }
-}
+
 
 #article_drawer{
     position: absolute;
@@ -128,110 +128,199 @@ body{
       z-index: 999;
 }
 
-.content{
+.content_wrapper{
      position: relative;
 }
 
+
+.news_content,.news_content2,.news_content3{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+     &:after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    opacity: 0.7;
+}
+}
 .news_content{
-    position: absolute;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height: 200px;
-    z-index: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("https://cdn2.vox-cdn.com/thumbor/f2EPzA8llCTzGi_TfI1rCEmO6do=/0x184:3696x2263/340x192/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48678951/GettyImages-486026810.0.jpg");
-   &:after{
+    &:after{
     content: '';
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
     background-image: linear-gradient(135deg, $violet,$dark-green);
-    opacity: 0.7;
-   }
+       }
 }
-.news_headline{
-    position:absolute;
-    top: 0;
-    left: 0;
-    h2{
-    font-size: 1.4em;
-    color:$primary-color;
-    font-weight: 400;
-    z-index:10;
-}
-label{
-    font-size: 0.75em;
-    color:$primary-color;
-    font-weight: 300;
-    z-index:10;
-}
-}
-
 .news_content2{
-    position: absolute;
-    top:200px;
-    left:0px;
-    width: 100%;
-    height: 200px;
-    z-index: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("https://cdn0.vox-cdn.com/thumbor/hBiFiQZoJS-f7OLPw5EjywaqE4w=/0x697:3000x1697/800x267/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48666971/20151010CASF_Water02145_1.0.0.jpg");
-
- &:after{
+     &:after{
     content: '';
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
     background-image: linear-gradient(135deg, $dark-blue,$purple);
-    opacity: 0.7;
-}
-}
-.news_headline2{
-    position:absolute;
-    top:200px;
-    left: 0;
-    h2{
-    font-size: 1.4em;
-    color:$primary-color;
-    font-weight: 400;
-    z-index:10;
-}
-label{
-    font-size: 0.75em;
-    color:$primary-color;
-    font-weight: 300;
-    z-index:10;
+   
 }
 }
 .news_content3{
-    position: absolute;
-    top:400px;
-    left:0px;
+     background-image: url("https://cdn2.vox-cdn.com/thumbor/5IDBWEBU6NVmKx8QgfEAM7aQLK4=/0x79:1275x796/340x192/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48692457/airmail.0.0.jpg");
+     &:after{
+        content: '';
+        background-image: linear-gradient(135deg, #292484,#dc4225);
+    
+}
+}
+.news_headline{
+    position:absolute;
+    z-index:10;
+    margin-left: 20px;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+   }
+}
+
+
+
+.news_scroller{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
     width: 100%;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.news_content4,.news_content5,.news_content6{
+    position:relative;
+    width: 80%;
     height: 200px;
-    z-index: 0;
+    display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("https://cdn2.vox-cdn.com/thumbor/5IDBWEBU6NVmKx8QgfEAM7aQLK4=/0x79:1275x796/340x192/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48692457/airmail.0.0.jpg");
-
- &:after{
+   
+&:after{
     content: '';
-    position:absolute;
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
-    height: 200px;
-    background-image: linear-gradient(135deg, #292484,#dc4225);
-    opacity: 0.7;
+    height: 100%;
+     opacity: 0.7;
+    
+    }
+}
+.news_content4{
+    background-image: url("https://cdn0.vox-cdn.com/thumbor/GJ3BjpihGIdTdMd4gfZZW4N1DiM=/0x0:1019x679/300x200/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48699183/youtube-ipad-logo1_1020.0.jpg");
+        &:after{
+            content: '';
+            background-image: linear-gradient(135deg, #d38312,#002f4b);
+        }
+}
+.news_content5{
+           background-image: url("https://cdn1.vox-cdn.com/thumbor/wDPIgG3boCgdJBJuUoM7ubJqk2k=/68x0:947x586/300x200/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48701763/Google-Campus-025.0.0.jpg");
+             &:after{
+                    content: '';
+                    background-image: linear-gradient(135deg, #e0be00,#dc4225);
+    
+            }
+}
+.news_content6{
+        background-image: url("https://cdn0.vox-cdn.com/thumbor/xY45jry9lRiOZF80b1OTQnD7LXA=/0x266:4256x1685/800x267/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/48698661/FM2_4593_hires2.0.0.jpg");
+            &:after{
+                    content: '';
+                    background-image: linear-gradient(135deg, #d38312,#a83279);
+   
+                }
+}
+.newslist_wrapper{
+    position:relative;
+    ul{
+        margin:0;
+        padding: 0;
+    }
+}
+
+.news_item{
+padding:15px;
+list-style-type: none;
+border-bottom: 1px solid #ddd;
+}
+.news_img{
+    padding-right:10px;
+    display: table-cell;
+ img{
+width:75px;
+height: 75px;
 }
 }
+.item_headline{
+    display: table-cell;
+    vertical-align: top;
+
+    h3{
+        font-size: 0.85em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    }
+    label{
+        font-size: 0.6em;
+        display: inline-block;
+    border-right: 1px solid #444;
+    margin-right: .25em;
+    padding-right: .25em;
+    }
+    span{
+        font-size: 0.6em;
+    }
+    }
+/*.scroll_headline{
+    position:absolute;
+    top:0px;
+    left: 0;
+     z-index:10;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+   
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    
+}
+}
+
+
+.news_headline2{
+    position:absolute;
+    top:0px;
+    left: 0;
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    z-index:10;
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    z-index:10;
+}
+}
+   
 .news_headline3{
     position:absolute;
     top:400px;
@@ -249,3 +338,24 @@ label{
     z-index:10;
 }
 }
+
+
+.news_headline4{
+    position:absolute;
+    top:0px;
+    left: 0;
+    z-index
+    h2{
+    font-size: 1.4em;
+    color:$primary-color;
+    font-weight: 400;
+    z-index:10;
+}
+label{
+    font-size: 0.75em;
+    color:$primary-color;
+    font-weight: 300;
+    z-index:10;
+}
+}
+*/
