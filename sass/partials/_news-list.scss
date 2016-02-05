@@ -9,7 +9,7 @@
 .news_item{
 padding:15px;
 list-style-type: none;
-border-bottom: 1px solid #ddd;
+border-bottom: 1px solid $border-color2;
 }
 .news_img{
     padding-right:10px;
@@ -25,15 +25,15 @@ border-bottom: 1px solid #ddd;
 
     h3{
         font-size: 0.85em;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
-    font-family: $primary-font;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        font-family: $primary-font;
     }
     label{
         font-size: 0.6em;
         display: inline-block;
-        border-right: 1px solid #444;
+        border-right: 1px solid $border-color;
         margin-right: .25em;
         padding-right: .25em;
         font-family: $content-font;
@@ -46,7 +46,7 @@ border-bottom: 1px solid #ddd;
 .recode{
         padding:15px;
         list-style-type: none;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid $border-color2;
 }
 .recode_logo{
     padding-bottom: 5px;
@@ -62,3 +62,78 @@ border-bottom: 1px solid #ddd;
     vertical-align: bottom;
 }
 }
+
+.news_wrapper{
+    display:none;
+}
+
+@media screen and (min-width: 480px) {
+    .item_headline{
+    h3{
+         font-size:1.1em;
+    }
+     label{
+        font-size: 0.7em;
+     }
+     span{
+        font-size: 0.7em;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .newslist_wrapper{
+        display: none;
+    }
+    .news_wrapper{
+    display: block;
+    position: relative;
+    overflow: auto;
+}
+    .news_col_left,.news_col_right{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px;
+         border: 1px solid $border-color2;
+            h3{
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            font-family: $primary-font;
+            margin: 0;
+        }
+        label{
+        font-size: 0.6em;
+        display: inline-block;
+        border-right: 1px solid $border-color;
+        margin-right: .25em;
+        padding-right: .25em;
+        font-family: $content-font;
+        font-weight: bold;
+    }
+        span{
+        font-size: 0.6em;
+    }
+    }
+    .news_col_left{
+        float: left;
+       
+    }
+    .news_col_right{
+        float: right;
+    }
+    .news_img{
+        display: block;
+        padding-right:10px 0;
+        img{
+        width: 90%;
+        height: 200px;
+        margin: 6px;
+        }
+    }
+    .news_description{
+        font-family: $content-font;
+        color: $news-descr-color;
+    }
+
+}
+

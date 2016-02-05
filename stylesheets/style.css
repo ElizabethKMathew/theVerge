@@ -260,6 +260,96 @@
   vertical-align: bottom;
 }
 
+/* line 66, ../sass/partials/_news-list.scss */
+.news_wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 72, ../sass/partials/_news-list.scss */
+  .item_headline h3 {
+    font-size: 1.1em;
+  }
+  /* line 75, ../sass/partials/_news-list.scss */
+  .item_headline label {
+    font-size: 0.7em;
+  }
+  /* line 78, ../sass/partials/_news-list.scss */
+  .item_headline span {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 84, ../sass/partials/_news-list.scss */
+  .newslist_wrapper {
+    display: none;
+  }
+
+  /* line 87, ../sass/partials/_news-list.scss */
+  .news_wrapper {
+    display: block;
+    position: relative;
+    overflow: auto;
+  }
+
+  /* line 92, ../sass/partials/_news-list.scss */
+  .news_col_left, .news_col_right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  /* line 97, ../sass/partials/_news-list.scss */
+  .news_col_left h3, .news_col_right h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    font-family: "Adelle", "Georgia", "serif";
+    margin: 0;
+  }
+  /* line 104, ../sass/partials/_news-list.scss */
+  .news_col_left label, .news_col_right label {
+    font-size: 0.6em;
+    display: inline-block;
+    border-right: 1px solid #444;
+    margin-right: .25em;
+    padding-right: .25em;
+    font-family: "Helvetica", "Arial", "sans-serif";
+    font-weight: bold;
+  }
+  /* line 113, ../sass/partials/_news-list.scss */
+  .news_col_left span, .news_col_right span {
+    font-size: 0.6em;
+  }
+
+  /* line 117, ../sass/partials/_news-list.scss */
+  .news_col_left {
+    float: left;
+  }
+
+  /* line 121, ../sass/partials/_news-list.scss */
+  .news_col_right {
+    float: right;
+  }
+
+  /* line 124, ../sass/partials/_news-list.scss */
+  .news_img {
+    display: block;
+    padding-right: 10px 0;
+  }
+  /* line 127, ../sass/partials/_news-list.scss */
+  .news_img img {
+    width: 90%;
+    height: 200px;
+    margin: 6px;
+  }
+
+  /* line 133, ../sass/partials/_news-list.scss */
+  .news_description {
+    font-family: "Helvetica", "Arial", "sans-serif";
+    color: #444;
+  }
+}
 /* line 1, ../sass/partials/_drawer.scss */
 #drawer {
   position: absolute;
@@ -333,7 +423,7 @@
 
 /* line 63, ../sass/partials/_drawer.scss */
 .articles_stories {
-  color: #333;
+  color: #000;
 }
 /* line 65, ../sass/partials/_drawer.scss */
 .articles_stories li {
@@ -373,48 +463,58 @@
 }
 
 /* line 13, ../sass/partials/_footer.scss */
+.footer_search_section {
+  display: none;
+}
+
+/* line 16, ../sass/partials/_footer.scss */
+.footer_logo {
+  display: none;
+}
+
+/* line 19, ../sass/partials/_footer.scss */
 .footer_links_wrapper {
   display: table;
   width: 100%;
 }
 
-/* line 17, ../sass/partials/_footer.scss */
+/* line 23, ../sass/partials/_footer.scss */
 .footer_links, .footer_site_info {
   padding-left: 20px;
   display: table-cell;
   font-family: "Adelle", "Georgia", "serif";
 }
-/* line 21, ../sass/partials/_footer.scss */
+/* line 27, ../sass/partials/_footer.scss */
 .footer_links ul, .footer_site_info ul {
   list-style: outside none none;
   padding: 0px;
 }
-/* line 24, ../sass/partials/_footer.scss */
+/* line 30, ../sass/partials/_footer.scss */
 .footer_links ul li, .footer_site_info ul li {
   padding: 8px;
 }
-/* line 26, ../sass/partials/_footer.scss */
+/* line 32, ../sass/partials/_footer.scss */
 .footer_links ul li a, .footer_site_info ul li a {
   color: #FFF;
   text-decoration: none;
 }
 
-/* line 35, ../sass/partials/_footer.scss */
+/* line 41, ../sass/partials/_footer.scss */
 .footer_social {
   text-align: center;
 }
-/* line 37, ../sass/partials/_footer.scss */
+/* line 43, ../sass/partials/_footer.scss */
 .footer_social ul {
   list-style: outside none none;
   padding: 0px;
 }
-/* line 41, ../sass/partials/_footer.scss */
+/* line 47, ../sass/partials/_footer.scss */
 .footer_social ul a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 48, ../sass/partials/_footer.scss */
+/* line 54, ../sass/partials/_footer.scss */
 .social_icon {
   height: 30px;
   width: 30px;
@@ -423,49 +523,78 @@
   display: inline-block;
 }
 
-/* line 55, ../sass/partials/_footer.scss */
+/* line 61, ../sass/partials/_footer.scss */
 .footer_social_media {
   display: none;
 }
 
-/* line 58, ../sass/partials/_footer.scss */
+/* line 64, ../sass/partials/_footer.scss */
+.footer_status {
+  display: none;
+}
+
+/* line 67, ../sass/partials/_footer.scss */
 .vox_box {
   color: #fff;
   font-size: 13px;
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 63, ../sass/partials/_footer.scss */
+/* line 72, ../sass/partials/_footer.scss */
 .vox_box a {
   text-decoration: none;
   color: #fa4b2a;
 }
 
 @media screen and (min-width: 480px) {
-  /* line 72, ../sass/partials/_footer.scss */
+  /* line 80, ../sass/partials/_footer.scss */
   .footer_social_media {
     padding-left: 20px;
     display: table-cell;
     font-family: "Adelle", "Georgia", "serif";
   }
-  /* line 76, ../sass/partials/_footer.scss */
+  /* line 84, ../sass/partials/_footer.scss */
   .footer_social_media ul {
     list-style: outside none none;
     padding: 0px;
   }
-  /* line 79, ../sass/partials/_footer.scss */
+  /* line 87, ../sass/partials/_footer.scss */
   .footer_social_media ul li {
     padding: 8px;
   }
-  /* line 81, ../sass/partials/_footer.scss */
+  /* line 89, ../sass/partials/_footer.scss */
   .footer_social_media ul li a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
   }
 
-  /* line 89, ../sass/partials/_footer.scss */
+  /* line 97, ../sass/partials/_footer.scss */
   .social_icon {
     display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 103, ../sass/partials/_footer.scss */
+  .footer_search {
+    display: none;
+  }
+
+  /* line 106, ../sass/partials/_footer.scss */
+  .footer_search_section {
+    display: table-cell;
+  }
+  /* line 108, ../sass/partials/_footer.scss */
+  .footer_search_section input {
+    width: 75%;
+    height: 50px;
+    margin-left: 20px;
+    vertical-align: top;
+  }
+
+  /* line 115, ../sass/partials/_footer.scss */
+  .vox_box {
+    text-align: right;
+    padding-right: 30px;
   }
 }
 /* line 10, ../sass/style.scss */
@@ -494,7 +623,7 @@ body {
   background-color: #f7f1ee;
   padding: 30px 0;
   display: block;
-  border: 1px solid #ddd;
+  border: 1px solid #999;
   border-width: 1px 0;
   text-decoration: none;
 }
